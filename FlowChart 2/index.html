@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flow Chart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="mainContainer" id="mainContainer0">
+        <div class="container" id="container0">
+          <div class="box" id="box0">
+            <div class="delBtn" id="delBtn0--1" onclick="delBtnClicked()"></div>
+          </div>
+          <div class="line"></div>
+          <div class="addBtn" id="addBtn0--1" onclick="addBtnClicked()">+</div>
+          <hr id="hr0" style="width: 50vw" />
+        </div>
+      </div>
+    </div>
+
+    <dialog id="dialog">
+      <h4>Enter the number of childs(1 or 2)</h4>
+      <div class="dialogCont">
+        <input type="text" id="inputField" />
+        <button type="submit" class="btn" onclick="dialogCloseBtnClicked()">
+          Insert
+        </button>
+      </div>
+    </dialog>
+    <dialog id="message"></dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
