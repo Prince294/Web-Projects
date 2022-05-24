@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(158, 255, 255);
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  margin-top: -1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  margin-top: -2em;
+}
+
+.box {
+  font-size: 4vw;
+  border: 2px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: rgb(158, 226, 226);
+}
+
+.gameInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.reset {
+  padding: 0.6em 2.6em;
+  font-size: 1.2em;
+  background-color: rgb(158, 226, 226);
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: rgb(148, 211, 211);
+}
+
+.trophy {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(75vw, 25vh);
+  animation: tilting 2s linear infinite;
+  z-index: -1;
+}
+
+.trophy img {
+  width: 12vw;
+}
+
+@keyframes tilting {
+  0% {
+    transform: translate(75vw, 25vh) rotate(0deg);
+  }
+  25% {
+    transform: translate(75vw, 25vh) rotate(-20deg);
+  }
+  50% {
+    transform: translate(75vw, 25vh) rotate(0deg);
+  }
+  75% {
+    transform: translate(75vw, 25vh) rotate(20deg);
+  }
+  100% {
+    transform: translate(75vw, 25vh) rotate(0deg);
+  }
+}
+
+.celeb {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  transform: rotate(180deg) translateY(-50vh);
+  animation: falling 3s linear infinite;
+  z-index: -1;
+}
+
+.celeb img {
+  width: 100%;
+}
+
+@keyframes falling {
+  80% {
+    transform: rotate(170deg) translateY(20vh);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bt0 {
+  border-top: 0;
+}
+.bb0 {
+  border-bottom: 0;
+}
+.bl0 {
+  border-left: 0;
+}
+.br0 {
+  border-right: 0;
+}
